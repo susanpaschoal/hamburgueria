@@ -18,6 +18,6 @@ Facilitar a navegação e o gerenciamento de pedidos.
 # 💻 Como Executar o Projeto
 Clone este repositório:
 git clone (https://github.com/susanpaschoal/hamburgueria)  
-Abra o arquivo index.html em seu navegador.
+Abra o arquivo index.html em seu navegador.  
 📢 Feedback
 Gostou do projeto? Tem alguma sugestão ou ideia para melhorias? Sinta-se à vontade para abrir uma issue ou entrar em contato.
