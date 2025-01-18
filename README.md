@@ -4,7 +4,7 @@ Este projeto é uma aplicação de Front-End desenvolvida com o objetivo de cria
 🎯 Objetivos do Projeto
 Oferecer uma experiência amigável para os usuários.
 Criar uma interface que funcione em diferentes dispositivos (desktop, mobile e tablets).
-Facilitar a navegação e o gerenciamento de pedidos.
+Facilitar a navegação e o gerenciamento de pedidos.  
 🚀 Tecnologias Utilizadas
 HTML5, CSS3 e JavaScript: Estrutura e interatividade do projeto.
 Design Responsivo: Para garantir acessibilidade em diferentes dispositivos.
