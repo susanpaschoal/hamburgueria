@@ -6,15 +6,15 @@ Oferecer uma experiência amigável para os usuários.
 Criar uma interface que funcione em diferentes dispositivos (desktop, mobile e tablets).
 Facilitar a navegação e o gerenciamento de pedidos.  
 # 🚀 Tecnologias Utilizadas
-HTML5, CSS3 e JavaScript: Estrutura e interatividade do projeto.
-Design Responsivo: Para garantir acessibilidade em diferentes dispositivos.  
+- HTML5, CSS3 e JavaScript: Estrutura e interatividade do projeto.
+- Design Responsivo: Para garantir acessibilidade em diferentes dispositivos.  
 # 🛠️ Próximos Passos
-Implementar o Back-End para lógica de negócios.
-Conectar o sistema a um Banco de Dados para armazenar e gerenciar informações.
-Adicionar funcionalidades como:
-Gestão de estoque.
-Emissão de relatórios.
-Autenticação de usuários.  
+- Implementar o Back-End para lógica de negócios.
+- Conectar o sistema a um Banco de Dados para armazenar e gerenciar informações.
+- Adicionar funcionalidades como:
+- Gestão de estoque.
+- Emissão de relatórios.
+- Autenticação de usuários.  
 # 💻 Como Executar o Projeto
 Clone este repositório:
 git clone (https://github.com/susanpaschoal/hamburgueria)  
