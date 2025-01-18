@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" type="imagem.png" href="img/logo_hamburgueria.png">
+    <title>Hambúrgueria Gourmet'</title>
+</head>
+<body>
+
+    <div class="caixa-video">
+        <video src="videos/video1.mp4" loop muted autoplay></video>
+        <div class="mascara"></div>
+    </div>
+
+    <header class="header">
+        <section>
+            <a href="#"><img src="img/logo_hamburgueria.png" alt=""></a>
+            <nav class="nav-menu">
+                <i class="bi bi-bag-check-fill" onclick="abrirCarrinho()"></i>
+                <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+                <div class="menu-links"> 
+                    <a href="index.html">Home</a>
+                    <a href="lanches.html">Lanches</a>
+                    <a href="#" onclick="abrirModal()">Endereço</a>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <main class="menu" id="main-content">
+        <section class="menu-section">
+            <h2>hambúrgueres</h2>
+            <div class="menu-items">
+                <div class="menu-card" onclick="mostrarDetalhes('Hambúrguer Clássico', 'img/classico.png', 'Carne bovina, alface, tomate, queijo cheddar e molho especial.', 25)" >
+                    <img src="img/classico.png" alt="Hambúrguer Clássico">
+                    <h3 class="nome">Hambúrguer Clássico</h3>
+                    <p class="descricao">Carne bovina, alface, tomate, queijo cheddar e molho especial.</p>
+                    <span class="price">R$ 25,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Cheeseburguer', 'img/Cheeseburger.png', 'Carne bovina, queijo cheddar derretido, picles e ketchup', 22)">
+                    <img src="img/Cheeseburger.png" alt="Cheeseburger">
+                    <h3 class="nome">Cheeseburger</h3>
+                    <p class="descricao">Carne bovina, queijo cheddar derretido, picles e ketchup</p>
+                    <span class="price">R$ 22,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Hambúrguer de Frango', 'img/Hambúrguer de Frango.png', 'Filé de frango grelhado, alface, tomate e maionese.',24)" >
+                    <img src="img/Hambúrguer de Frango.png" alt="Hambúrguer de Frango">
+                    <h3 class="nome">Hambúrguer de Frango</h3>
+                    <p class="descricao">Filé de frango grelhado, alface, tomate e maionese.</p>
+                    <span class="price">R$ 24,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Veggie Burger', 'img/Veggie Burger.png', 'Hambúrguer de grão-de-bico, alface, tomate, cebola roxa e molho de iogurte', 23)">
+                    <img src="img/Veggie Burger.png" alt="Veggie Burger">
+                    <h3 class="nome">Veggie Burger</h3>
+                    <p class="descricao">Hambúrguer de grão-de-bico, alface, tomate, cebola roxa e molho de iogurte</p>
+                    <span class="price">R$ 23,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Bacon Burger', 'img/Bacon Burguer.png', 'Carne bovina, bacon crocante, queijo cheddar, cebola caramelizada e barbecue', 28)">
+                    <img src="img/Bacon Burguer.png" alt="Bacon Burger">
+                    <h3 class="nome">Bacon Burger</h3>
+                    <p class="descricao">Carne bovina, bacon crocante, queijo cheddar, cebola caramelizada e barbecue</p>
+                    <span class="price">R$ 28,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Double Burger' ,'img/Double Burger.png','Dois hambúrgueres de carne bovina, queijo cheddar duplo, alface e tomate.',30)">
+                    <img src="img/Double Burger.png" alt="Double Burger">
+                    <h3 class="nome">Double Burger</h3>
+                    <p class="descricao">Dois hambúrgueres de carne bovina, queijo cheddar duplo, alface e tomate.</p>
+                    <span class="price">R$ 30,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Hambúrguer de Picanha','img/Hambúrguer de Picanha.png','Picanha grelhada, queijo prato, rúcula e molho chimichurri.',32)">
+                    <img src="img/Hambúrguer de Picanha.png" alt="Hambúrguer de Picanha">
+                    <h3 class="nome">Hambúrguer de Picanha</h3>
+                    <p class="descricao">Picanha grelhada, queijo prato, rúcula e molho chimichurri.</p>
+                    <span class="price">R$ 32,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Queijo Brie com Mel', 'img/Queijo Brie.jpg','Queijo brie derretido com mel e nozes.',38)">
+                    <img src="img/Queijo Brie.jpg" alt="Queijo Brie com Mel">
+                    <h3 class="nome">Queijo Brie com Mel</h3>
+                    <p class="descricao">Queijo brie derretido com mel e nozes.</p>
+                    <span class="price">R$ 38,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Truffle Burger', 'img/truffled.jpg', 'Hambúrguer de carne wagyu, queijo brie, rúcula, e molho de trufas.',45)">
+                    <img src="img/truffled.jpg" alt="Truffle Burger">
+                    <h3 class="nome">Truffle Burger</h3>
+                    <p class="descricao">Hambúrguer de carne wagyu, queijo brie, rúcula, e molho de trufas.</p>
+                    <span class="price">R$ 45,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Foie Gras Burger', 'img/Foie Gras Burger.png', 'Hambúrguer de carne bovina premium, foie gras, cebola caramelizada e figo.',55)">
+                    <img src="img/Foie Gras Burger.png" alt="Foie Gras Burger">
+                    <h3 class="nome">Foie Gras Burger</h3>
+                    <p class="descricao">Hambúrguer de carne bovina premium, foie gras, cebola caramelizada e figo.</p>
+                    <span class="price">R$ 55,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Lamb Burger', 'img/lamb burguer.png', 'Hambúrguer de cordeiro, queijo de cabra, rúcula, e molho de hortelã.',50)">
+                    <img src="img/lamb burguer.png" alt="Lamb Burger">
+                    <h3 class="nome">Lamb Burger</h3>
+                    <p class="descricao">Hambúrguer de cordeiro, queijo de cabra, rúcula, e molho de hortelã.</p>
+                    <span class="price">R$ 50,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Duck Confit Burger', 'img/Duck Confit Burger.png', 'Hambúrguer de pato confitado, compota de maçã e rúcula',48)">
+                    <img src="img/Duck Confit Burger.png" alt="Duck Confit Burger">
+                    <h3 class="nome">Duck Confit Burger</h3>
+                    <p class="descricao">Hambúrguer de pato confitado, compota de maçã e rúcula.</p>
+                    <span class="price">R$ 48,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Portobello Mushroom Burger', 'img/Portobello Mushroom Burger.png', 'Cogumelo portobello grelhado, queijo gruyère, cebola caramelizada e pesto de manjericão.',40)">
+                    <img src="img/Portobello Mushroom Burger.png" alt="Portobello Mushroom Burger">
+                    <h3 class="nome">Portobello Mushroom Burger</h3>
+                    <p class="descricao">Cogumelo portobello grelhado, queijo gruyère, cebola caramelizada e pesto de manjericão.</p>
+                    <span class="price">R$ 40,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Salmon Burger', 'img/Salmon Burger.png', 'Hambúrguer de salmão, creme de dill, alface americana e cebola roxa.',42)">
+                    <img src="img/Salmon Burger.png" alt="Salmon Burger">
+                    <h3 class="nome">Salmon Burger</h3>
+                    <p>Hambúrguer de salmão, creme de dill, alface americana e cebola roxa.</p>
+                    <span class="price">R$ 42,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Blue Cheese Burger', 'img/Blue Cheese Burger.png', 'Hambúrguer de carne bovina premium, queijo gorgonzola, pêra caramelizada e nozes.',47)">
+                    <img src="img/Blue Cheese Burger.png" alt="Blue Cheese Burger">
+                    <h3 class="nome">Blue Cheese Burger</h3>
+                    <p class="descricao">Hambúrguer de carne bovina premium, queijo gorgonzola, pêra caramelizada e nozes.</p>
+                    <span class="price">R$ 47,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Black Garlic Burger', 'img/Black Garlic Burger.png', 'Hambúrguer de carne bovina premium, alho negro, rúcula e queijo parmesão.',46)">
+                    <img src="img/Black Garlic Burger.png" alt="Black Garlic Burger">
+                    <h3 class="nome">Black Garlic Burger</h3>
+                    <p class="descricao">Hambúrguer de carne bovina premium, alho negro, rúcula e queijo parmesão.</p>
+                    <span class="price">R$ 46,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Crab Cake Burger', 'img/Crab Cake Burger.png', 'Bolinho de caranguejo, maionese de limão siciliano, rúcula e tomate.',49)">
+                    <img src="img/crab cake.png" alt="Crab Cake Burger">
+                    <h3 class="nome">Crab Cake Burger</h3>
+                    <p class="descricao">Bolinho de caranguejo, maionese de limão siciliano, rúcula e tomate.</p>
+                    <span class="price">R$ 49,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Gourmet Veggie Burger', 'img/Gourmet Veggie Burger.png', 'Hambúrguer de quinoa e beterraba, queijo feta, abacate e molho de iogurte com hortelã.',38)">
+                    <img src="img/Gourmet Veggie Burger.png" alt="Gourmet Veggie Burger">
+                    <h3 class="nome">Gourmet Veggie Burger</h3>
+                    <p class="descricao">Hambúrguer de quinoa e beterraba, queijo feta, abacate e molho de iogurte com hortelã.</p>
+                    <span class="price">R$ 38,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Camembert Burger', 'img/Camembert Burger.png', 'Hambúrguer de carne bovina premium, queijo camembert, cogumelos salteados e rúcula, servido em um pão artesanal com molho de mostarda e mel.',48)"> 
+                    <img src="img/Camembert Burger.png" alt="Camembert Burger">
+                     <h3 class="nome">Camembert Burger</h3> 
+                     <p class="descricao">Hambúrguer de carne bovina premium, queijo camembert, cogumelos salteados e rúcula, servido em um pão artesanal com molho de mostarda e mel.</p> 
+                     <span class="price">R$ 48,00</span> 
+                    </div> 
+                    <div class="menu-card" onclick="mostrarDetalhes('Pesto Chicken Burger', 'img/Pesto Chicken Burger.png', 'Filé de frango grelhado, pesto de manjericão, tomate seco e queijo mozzarella, servido em um pão ciabatta.',44)"> 
+                        <img src="img/Pesto Chicken Burger.png" alt="Pesto Chicken Burger"> 
+                        <h3 class="nome">Pesto Chicken Burger</h3> 
+                        <p>Filé de frango grelhado, pesto de manjericão, tomate seco e queijo mozzarella, servido em um pão ciabatta.</p> 
+                        <span class="price">R$ 44,00</span> 
+                    </div>
+                    <div class="menu-card" onclick="mostrarDetalhes('Burguer Royale', 'img/Burguer Royale.png', 'Um hambúrguer gourmet com carne suculenta, queijo brie, rúcula, e uma deliciosa geleia de pimenta.',68)">
+                        <img src="img/Burguer Royale.png" alt="Burguer Royale">
+                        <h3 class="nome">Burguer Royale</h3>
+                        <p class="descricao">Um hambúrguer gourmet com carne suculenta, queijo brie, rúcula, e uma deliciosa geleia de pimenta.</p>
+                        <span class="price">R$ 68,00</span>
+                    </div>
+                    
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Porções</h2>
+            <div class="menu-items">
+                <div class="menu-card" onclick="mostrarDetalhes('Chicken Crispy', 'img/Chicken Crispy.png', 'Frango empanado crocante, queijo suíço, alface e molho ranch',27)">
+                    <img src="img/Chicken Crispy.png" alt="Chicken Crispy">
+                    <h3 class="nome">Chicken Crispy</h3>
+                    <p class="descricao">Frango empanado crocante, queijo suíço, alface e molho ranch.</p> 
+                    <span class="price">R$ 27,00</span>
+                </div>                
+                <div class="menu-card" onclick="mostrarDetalhes('Batata Frita', 'img/Batata Frita.png', 'Batatas fritas crocantes e salgadas, perfeitas para acompanhar qualquer lanche.',68)">
+                    <img src="img/Batata Frita.png" alt="Batata Frita">
+                    <h3 class="nome">Batata Frita</h3>
+                    <p class="descricao">Batatas fritas crocantes e salgadas, perfeitas para acompanhar qualquer lanche.</p>
+                    <span class="price">R$ 20,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Batata Rústica', 'img/Batata rustica.png', 'Batatas rústicas assadas com ervas e especiarias, crocantes por fora e macias por dentro.',68)">
+                <img src="img/Batata rustica.png" alt="Batata Rustica">
+                <h3 class="nome">Batata Rústica</h3>
+                <p class="descricao">Batatas rústicas assadas com ervas e especiarias, crocantes por fora e macias por dentro.</p>
+                <span class="price">R$ 32,00</span>
+            </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Anéis de Cebola', 'img/Anéis de Cebola.png', 'Anéis de cebola empanados e fritos até ficarem dourados e crocantes.',68)">
+                    <img src="img/Anéis de Cebola.png" alt="Anéis de Cebola">
+                    <h3 class="nome">Anéis de Cebola</h3>
+                    <p class="descricao">Anéis de cebola empanados e fritos até ficarem dourados e crocantes.</p>
+                    <span class="price">R$ 30,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Salada Coleslaw', 'img/Salada Coleslaw.png', 'Salada refrescante de repolho e cenoura com molho cremoso de maionese e vinagre.',35)">
+                    <img src="img/Salada Coleslaw.png" alt="Salada Coleslaw">
+                    <h3 class="nome">Salada Coleslaw</h3>
+                    <p class="descricao">Salada refrescante de repolho e cenoura com molho cremoso de maionese e vinagre.</p>
+                    <span class="price">R$ 35,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Mozzarella Sticks', 'img/Mozzarella Sticks.png', 'Palitos de mussarela empanados e fritos até ficarem dourados, servidos com molho marinara.',68)">
+                    <img src="img/Mozzarella Sticks.png" alt="Salmão Grelhado">
+                    <h3 class="nome">Mozzarella Sticks</h3>
+                    <p class="descricao">Palitos de mussarela empanados e fritos até ficarem dourados, servidos com molho marinara.</p>
+                    <span class="price">R$ 68,00</span>
+                </div>
+
+            </div>
+        </section>
+        <section class="menu-section">
+            <h2>Sobremesas</h2>
+            <div class="menu-items">
+                <div class="menu-card" onclick="mostrarDetalhes('Petit Gâteau', 'img/petit gateau.png', 'Um delicioso bolinho de chocolate com casca crocante e recheio cremoso, servido com sorvete de creme.',35)">
+                    <img src="img/petit gateau.png" alt="Petit Gâteau">
+                    <h3 class="nome">Petit Gâteau</h3>
+                    <p class="descricao">Um delicioso bolinho de chocolate com casca crocante e recheio cremoso, servido com sorvete de creme.</p>
+                    <span class="price">R$ 35,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Palha Italiana', 'img/Palha Italiana.png', 'Uma deliciosa combinação de brigadeiro com biscoitos triturados, servida em quadradinhos irresistíveis.',20)">
+                    <img src="img/Palha Italiana.png" alt="Palha Italiana">
+                    <h3 class="nome">Palha Italiana</h3>
+                    <p class="descricao">Uma deliciosa combinação de brigadeiro com biscoitos triturados, servida em quadradinhos irresistíveis.</p>
+                    <span class="price">R$ 20,00</span>
+                </div>
+                                <div class="menu-card" onclick="mostrarDetalhes('Torta de Morango', 'img/Torta de Morango.png', 'Uma torta leve e saborosa com morangos frescos e chantilly sobre uma base crocante de biscoito.',30)">
+                    <img src="img/Torta de Morango.png" alt="Torta de Morango">
+                    <h3 class="nome">Torta de Morango</h3>
+                    <p class="descricao">Uma torta leve e saborosa com morangos frescos e chantilly sobre uma base crocante de biscoito.</p>
+                    <span class="price">R$ 30,00</span>
+                </div>
+                                
+            </div>
+        </section>
+        <section class="menu-section">
+            <h2>Bebidas</h2>
+            <div class="menu-items">
+                <div class="menu-card" onclick="mostrarDetalhes('Suco de Laranja', 'img/suco.png', 'Suco de laranja fresco espremido na hora. <br> 500ml',12)">
+                    <img src="img/suco.png" alt="Suco de Laranja">
+                    <h3 class="nome">Suco de Laranja</h3>
+                    <p class="descricao">Suco de laranja fresco espremido na hora. <br> 500ml</p>
+                    <span class="price">R$ 12,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Refrigerante', 'img/Refrigerante.png', 'Escolha entre cola, guaraná ou limão.',8)">
+                    <img src="img/Refrigerante.png" alt="Refrigerante">
+                    <h3 class="nome">Refrigerante</h3>
+                    <p class="descricao">Escolha entre cola, guaraná ou limão.</p>
+                    <span class="price">R$ 8,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Milkshake de Chocolate', 'img/Milkshake de Chocolate.png', 'Um milkshake cremoso de chocolate, perfeito para os amantes de doces.',18)">
+                    <img src="img/Milkshake de Chocolate.png" alt="Milkshake de Chocolate">
+                    <h3 class="nome">Milkshake de Chocolate</h3>
+                    <p class="descricao">Um milkshake cremoso de chocolate, perfeito para os amantes de doces.</p>
+                    <span class="price">R$ 18,00</span>
+                </div>
+                                                
+            </div>
+        </section>
+        <section class="menu-section">
+            <h2>Bebidas Alcoólicas</h2>
+            <div class="menu-items" >
+                <div class="menu-card" onclick="mostrarDetalhes('Cocktail Exótico', 'img/Cocktail Exótico.png', 'Uma combinação refrescante de rum, suco de abacaxi e hortelã.',25)">
+                    <img src="img/Cocktail Exótico.png" alt="Cocktail Exótico">
+                    <h3 class="nome">Cocktail Exótico</h3>
+                    <p class="descricao">Uma combinação refrescante de rum, suco de abacaxi e hortelã.</p>
+                    <span class="price">R$ 25,00</span>
+                </div>
+                
+                <div class="menu-card" onclick="mostrarDetalhes('Vinho Tinto', 'img/vinho.png', 'Um vinho tinto encorpado com notas de frutas vermelhas e especiarias.',65)">
+                    <img src="img/vinho.png" alt="Vinho Tinto">
+                    <h3 class="nome">Vinho Tinto</h3>
+                    <p class="descricao">Um vinho tinto encorpado com notas de frutas vermelhas e especiarias.</p>
+                    <span class="price">R$ 65,00</span>
+                </div>
+                <div class="menu-card" onclick="mostrarDetalhes('Gin Tônica', 'img/gin.png', 'Uma clássica gin tônica com limão e um toque de hortelã.',20)">
+                    <img src="img/gin.png" alt="Gin Tônica">
+                    <h3 class="nome">Gin Tônica</h3>
+                    <p class="descricao">Uma clássica gin tônica com limão e um toque de hortelã.</p>
+                    <span class="price">R$ 20,00</span>
+                </div>
+                                                                
+            </div>
+            <div id="detalhes" style="display: none;"> <button onclick="fecharDetalhes()">Voltar</button> <img id="detalhe-imagem" src="" alt=""> <h3 id="detalhe-nome"></h3> <p id="detalhe-descricao"></p> <span id="detalhe-preco"></span> </div>
+        </section>
+    </main>
+
+    <div class="modal">
+        <h3 class="titulo"><span>Nosso</span> Endereço</h3>
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.4048725025066!2d-46.63881858448711!3d-23.56116518467796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e9dbd6d78e5%3A0x7c66ff9f1052f9e3!2sRua%20dos%20Testes%2C%20123!5e1!3m2!1spt-BR!2sbr!4v1681212948220!5m2!1spt-BR!2sbr" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+                </div>
+                <footer class="footer" id="footer">
+                    <section class="footer-content">
+                        <div class="footer-logo">
+                            <a href="#"><img src="img/logo_hamburgueria.png" alt="Logo da Hamburgueria"></a>
+                        </div>
+                        <div class="footer-social">
+                            <a href="https://wa.me/5511971511587" target="_blank" class="social-icon whatsapp">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-icon instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://tiktok.com" target="_blank" class="social-icon tiktok">
+                                <i class="bi bi-tiktok"></i>
+                            </a>
+                        </div>                        </section>
+                    <section class="footer-bottom">
+                        <p>&copy; 2025 Sua Hamburgueria Gourmet. 
+                            Todos os direitos reservados.</p> <br>
+                            <p>Desenvolvido por <a href="#"><strong>Susan Paschoal</strong></a></p>
+                    </section>
+                </footer>
+
+    <div class="mascara-modal" onclick="esconderModal()"></div>
+    <script src="scripts.js">
+    </script>
+</body>
+</html> 
+  

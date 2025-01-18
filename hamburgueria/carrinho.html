@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="imagem.png" href="img/logo_hamburgueria.png">
+    <title>Hambúrgueria Gourmet'</title>
+</head>
+<body>
+    <div class="caixa-video">
+        <video src="videos/video1.mp4" loop muted autoplay></video>
+        <div class="mascara"></div>
+    </div>
+
+    <header class="header">
+        <section>
+            <a href="#"><img src="img/logo_hamburgueria.png" alt=""></a>
+            <nav class="nav-menu">
+                <i class="bi bi-bag-check-fill"></i>
+                <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+                <div class="menu-links"> 
+                    <a href="index.html">Home</a>
+                    <a href="lanches.html">Lanches</a>
+                    <a href="#" onclick="abrirModal()">Endereço</a>
+                </div>
+            </nav>
+        </section>
+    </header>
+        <div class="cart-box" id="cart-box" >
+            <h2>Carrinho de Compras</h2>
+            <div class="cart-items" id="cart-items-container">
+                <div class="cart-item">
+                    <img src="img/Cheeseburger.png" alt="Cheeseburger" style="width: 80px; height: 80px;">
+                    <div class="cart-item-info">
+                        <h3>Cheeseburger</h3>
+                        <p>R$ 22,00</p>
+                        <p class="quantity">Quantidade 1</p>
+                    <div class="remove"><button class="btn-remove">Remover</button>
+                    </div>                    
+                </div>
+                </div>
+                <div class="cart-item">
+                    <img src="img/Batata Frita.png" alt="Batata Frita" style="width: 80px; height: 80px;">
+                    <div class="cart-item-info">
+                        <h3>Batata Frita</h3>
+                        <p>R$ 20,00</p>
+                        <p class="quantity">Quantidade 1</p>
+                    <div class="remove"><button class="btn-remove">Remover</button>
+                    </div>                    
+                </div>
+                </div>
+                <div class="cart-item">
+                    <img src="img/Refrigerante.png" alt="Refrigerante" style="width: 80px; height: 80px;">
+                    <div class="cart-item-info">
+                        <h3>Refrigerante</h3>
+                        <p>R$ 8,00</p>
+                        <p class="quantity">Quantidade 1</p>
+                    <div class="remove"><button class="btn-remove">Remover</button>
+                    </div>                    
+                </div>
+                </div>
+                
+            </div>
+
+            <div class="cart-summary">
+                <p id="cart-total">Total: <span>R$ 50,00</span></p>
+                <button class="btn-checkout" onclick="togglePagamento()">Ir para Pagamento</button>
+            </div>
+        </div>
+
+        <div class="payment-delivery-container" id="payment-delivery-container" >
+            <h2>Pagamento e Entrega</h2>
+            <!-- Seção de informações de pagamento -->
+            <div class="payment-info">
+                <h3>Informações de Pagamento</h3>
+                <form> 
+                    <label for="payment-method">Método de Pagamento</label> 
+                    <select id="payment-method" name="payment-method" required onchange="togglePaymentFields()"> 
+                        <option value="debit"><i class="bi bi-credit-card"></i>Débito / Crédito</option> 
+                        <option value="pix" ><i class="bi bi-coin"></i>PIX</option> 
+                        <option value="cash"><i class="bi bi-cash"></i>Dinheiro</option> 
+                    </select>            
+                </div>
+            <!-- Seção de informações de entrega -->
+            <div class="delivery-info">
+                <h3>Informações de Entrega</h3>
+                <form>
+                    <input type="text" id="name" name="name" required placeholder="Nome">
+                    <input type="text" id="address" name="address" required placeholder="Endereço completo">                    
+                    <input type="text" id="numero" name="numero" required placeholder="N°">                    
+                    
+                </form>
+            </div>
+            <!-- Botão de confirmação -->
+            <div class="confirm-button">
+                <button type="submit" class="btn-cormfirm" onclick="enviarPedido()">Confirmar Pedido</button>
+            </div>
+        </div>
+
+
+    <div class="modal">
+        <h3 class="titulo"><span>Nosso</span> Endereço</h3>
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.4048725025066!2d-46.63881858448711!3d-23.56116518467796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e9dbd6d78e5%3A0x7c66ff9f1052f9e3!2sRua%20dos%20Testes%2C%20123!5e1!3m2!1spt-BR!2sbr!4v1681212948220!5m2!1spt-BR!2sbr" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <div class="mascara-modal" onclick="esconderModal()"></div>
+    <script src="scripts.js">
+    </script>
+</body>
+</html>
